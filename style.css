@@ -128,7 +128,7 @@ a.active {
 .booking-form input:focus {
     outline: none;
     border: 1px solid white;
-    color: #ACACAC;
+    color: #fff;
 }
 
 .booking-form .inputs {

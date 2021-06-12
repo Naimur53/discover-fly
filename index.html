@@ -39,73 +39,73 @@
             </div>
             <div class="inputs">
                 <div class="input-group">
-                    <label " for=" ">Departure</label>
-                    <input class="inp-style " type="date " name=" ">
+                    <label for=" ">Departure</label>
+                    <input class="inp-style" type="date" name=" ">
                 </div>
                 <div class="input-group ">
                     <label for=" ">Return</label>
-                    <input class="inp-style " type="date " name=" ">
+                    <input class="inp-style" type="date" name=" ">
                 </div>
             </div>
-            <div class="input-group f-class ">
+            <div class="input-group f-class">
                 <div>
                     <label for=" ">First Class ($150)</label>
-                    <input class="inp-style inp-width " type="number " name=" ">
+                    <input value="1" id="first-class" class="inp-style inp-width" type="number" name=" ">
                 </div>
-                <div class="plus-minus-btn "> 
-                    <button>+</button>
-                    <button>-</button>
+                <div class="plus-minus-btn">
+                    <button onclick="increase('first','plus')">+</button>
+                    <button onclick="increase('first','minus')">-</button>
                 </div>
             </div>
-            
-            <div class="input-group f-class ">
+
+            <div class="input-group f-class">
                 <div>
                     <label for=" ">Economy ($100)</label>
-                    <input class="inp-style inp-width " type="number " name=" ">
+                    <input value="1" id="economy-class" class="inp-style inp-width" type="number" name=" ">
                 </div>
-                <div class="plus-minus-btn "> 
-                    <button>+</button>
-                    <button>-</button>
+                <div class="plus-minus-btn">
+                    <button onclick="increase('economy','plus')">+</button>
+                    <button onclick="increase('economy','minus')">-</button>
                 </div>
             </div>
-            <div class="calculations ">
-                <div class="amount ">
-                    <div class="left ">
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
                         <p>Subtotal</p>
                     </div>
-                    <div class="right ">
-                        <p>$500</p>
+                    <div class="right">
+                        <p>$00</p>
                     </div>
                 </div>
 
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <p>Charge 10% VAT</p>
                     </div>
-                    <div class="right ">
-                        <p>$50</p>
+                    <div class="right">
+                        <p>$0</p>
                     </div>
                 </div>
                 <hr>
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <h4>Total</h4>
                     </div>
-                    <div class="right ">
-                        <p>$550</p>
+                    <div class="right">
+                        <p>$0</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style ">Book Now</button>
+            <button class="btn-style">Book Now</button>
         </div>
 
-        <div class="booking-content ">
+        <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
-    </section>
-
-    <!--Thank You-->
+        </section>
+        <script src="main.js"></script>
+        <!--Thank You-->
 </body>
 
 </html>

@@ -13,6 +13,9 @@ body {
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 nav {
@@ -159,6 +162,13 @@ a.active {
     color: #fff;
     font-weight: 500;
     background-color: #3352F2;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.btn-style:hover {
+    background-color: transparent;
+    border-color: #fff;
 }
 
 .amount {
@@ -173,4 +183,54 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.booking-form {
+    transition: all .3s ease-in-out;
+    position: absolute;
+    left: 200px
+}
+
+.booking-content {
+    width: 35%;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    right: 270px;
+    top: 200px;
+    transition: all .39s ease-in-out;
+}
+
+.slide-left {
+    position: absolute;
+    left: -500px;
+}
+
+.slide-right {
+    position: absolute;
+    right: -550px;
+}
+
+#last {
+    display: none;
+}
+
+.default {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 10s;
+}
+
+.content {
+    width: 25%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    backdrop-filter: blur(11px);
+    border-radius: 5px;
 }

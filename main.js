@@ -3,6 +3,37 @@
 // console.log(firstClassNum);
 
 
+
+function getValue(whichClass) {
+    const ticketAmount = document.getElementById(whichClass + "-class");
+    const ticketAmountNum = parseInt(ticketAmount.value);
+    return ticketAmountNum;
+}
+
+
+function getElement(voucherClass) {
+    const element = document.getElementById(voucherClass);
+    return element;
+}
+
+function calculate() {
+    const firstClass = getValue("first");
+    const economyClass = getValue("economy");
+
+    const total = firstClass * 150 + economyClass * 100;
+    const subtotal = getElement("subtotal");
+    subtotal.innerText = total;
+
+    const vat = total * 0.1;
+    const vatCharge = getElement("vat-charge");
+    vatCharge.innerText = vat;
+
+    const grandTotal = vat + total;
+    const grandTotalId = getElement("grand-total");
+    grandTotalId.innerText = grandTotal;
+
+}
+
 function increase(firstOrEconomy, isIncrease) {
     let ticketAmountNum = getValue(firstOrEconomy);
     if (isIncrease == 'plus') {
@@ -12,10 +43,18 @@ function increase(firstOrEconomy, isIncrease) {
         ticketAmountNum--;
     }
     document.getElementById(firstOrEconomy + "-class").value = ticketAmountNum;
+    calculate();
 }
 
-function getValue(whichClass) {
-    const ticketAmount = document.getElementById(whichClass + "-class");
-    const ticketAmountNum = parseInt(ticketAmount.value);
-    return ticketAmountNum;
-}
+
+
+// booking btn
+document.getElementById("booking-btn").addEventListener("click", function() {
+    document.getElementById("booking-form").setAttribute("class", "slide-left booking-form");
+    document.getElementById("booking-content").setAttribute("class", "slide-right booking-content");
+    document.getElementById("header").style.display = "none";
+    document.getElementById("last").style.display = "block";
+    document.getElementById("last").style.display = "flex";
+    document.getElementById("last").setAttribute("class", "default ");
+
+})

@@ -47,14 +47,12 @@ function increase(firstOrEconomy, isIncrease) {
 }
 
 
-
 // booking btn
 document.getElementById("booking-btn").addEventListener("click", function() {
-    document.getElementById("booking-form").setAttribute("class", "slide-left booking-form");
-    document.getElementById("booking-content").setAttribute("class", "slide-right booking-content");
-    document.getElementById("header").style.display = "none";
-    document.getElementById("last").style.display = "block";
-    document.getElementById("last").style.display = "flex";
-    document.getElementById("last").setAttribute("class", "default ");
-
+    getElement("booking-form").setAttribute("class", "slide-left booking-form");
+    getElement("booking-content").setAttribute("class", "slide-right booking-content");
+    getElement("header").style.display = "none";
+    getElement("ticket").setAttribute("class", "default");
+    getElement("ticket-inner").setAttribute("class", "change-position content");
+    getElement("ticket").style.backdropFilter = "blur(10px)";
 })

@@ -186,6 +186,7 @@ input::-webkit-inner-spin-button {
 }
 
 .booking-form {
+    height: 90%;
     transition: all .3s ease-in-out;
     position: absolute;
     left: 200px;
@@ -193,7 +194,6 @@ input::-webkit-inner-spin-button {
 
 .booking-content {
     width: 35%;
-    height: 80%;
     transition: all .3s ease-in-out;
     position: absolute;
     right: 270px;

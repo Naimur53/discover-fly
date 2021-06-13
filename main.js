@@ -49,10 +49,40 @@ function increase(firstOrEconomy, isIncrease) {
 
 // booking btn
 document.getElementById("booking-btn").addEventListener("click", function() {
+
+
+    // result 
+    const inputLocation1 = getElement("input-location1").value;
+    const inputLocation2 = getElement("input-location2").value;
+    console.log(inputLocation1.length);
+    if (inputLocation1.length <= 0 && inputLocation2.length <= 0) {
+        alert("please input location");
+    } else {
+        animation();
+    }
+    setInputLocation(inputLocation1, inputLocation2);
+})
+
+function animation() {
     getElement("booking-form").setAttribute("class", "slide-left booking-form");
     getElement("booking-content").setAttribute("class", "slide-right booking-content");
+
     getElement("header").style.display = "none";
     getElement("ticket").setAttribute("class", "default");
+
     getElement("ticket-inner").setAttribute("class", "change-position content");
     getElement("ticket").style.backdropFilter = "blur(10px)";
-})
+}
+
+function setInputLocation(inputLocation1, inputLocation2) {
+    getElement("location1").innerText = inputLocation1;
+    getElement("location2").innerText = inputLocation2;
+    const firstClassTicketAmount = getElement("first-class").value;
+    getElement("first").innerText = firstClassTicketAmount;
+
+    const economyTicketAmount = getElement("economy-class").value;
+    getElement("economy").innerText = economyTicketAmount;
+
+    const result = getElement("grand-total").innerText;
+    getElement("result").innerText = result;
+}

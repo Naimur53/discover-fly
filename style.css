@@ -240,6 +240,7 @@ input::-webkit-inner-spin-button {
 .content p {
     font-size: 18px;
     text-align: justify;
+    word-spacing: 2px;
     color: black;
     margin-top: 20px;
 }

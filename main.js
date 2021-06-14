@@ -7,6 +7,14 @@
 function getValue(whichClass) {
     const ticketAmount = document.getElementById(whichClass + "-class");
     const ticketAmountNum = parseInt(ticketAmount.value);
+    // lets input amount of ticket to result aria 
+    if (whichClass == "first") {
+        getElement(whichClass).innerText = ticketAmountNum;
+
+    } else if (whichClass == "economy") {
+        getElement(whichClass).innerText = ticketAmountNum;
+
+    }
     return ticketAmountNum;
 }
 
@@ -32,6 +40,8 @@ function calculate() {
     const grandTotalId = getElement("grand-total");
     grandTotalId.innerText = grandTotal;
 
+    getElement("result").innerText = grandTotal;
+
 }
 
 function increase(firstOrEconomy, isIncrease) {
@@ -53,14 +63,17 @@ document.getElementById("booking-btn").addEventListener("click", function() {
 
     // result 
     const inputLocation1 = getElement("input-location1").value;
+    getElement("location1").innerText = inputLocation1;
+
     const inputLocation2 = getElement("input-location2").value;
-    console.log(inputLocation1.length);
+    getElement("location2").innerText = inputLocation2;
+
     if (inputLocation1.length <= 0 && inputLocation2.length <= 0) {
         alert("please input location");
     } else {
+        calculate();
         animation();
     }
-    setInputLocation(inputLocation1, inputLocation2);
 })
 
 function animation() {
@@ -72,17 +85,4 @@ function animation() {
 
     getElement("ticket-inner").setAttribute("class", "change-position content");
     getElement("ticket").style.backdropFilter = "blur(10px)";
-}
-
-function setInputLocation(inputLocation1, inputLocation2) {
-    getElement("location1").innerText = inputLocation1;
-    getElement("location2").innerText = inputLocation2;
-    const firstClassTicketAmount = getElement("first-class").value;
-    getElement("first").innerText = firstClassTicketAmount;
-
-    const economyTicketAmount = getElement("economy-class").value;
-    getElement("economy").innerText = economyTicketAmount;
-
-    const result = getElement("grand-total").innerText;
-    getElement("result").innerText = result;
 }

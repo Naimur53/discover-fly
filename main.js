@@ -2,7 +2,10 @@
 // const firstClassNum = parseInt(firstClass);
 // console.log(firstClassNum);
 
-
+function preloader(){
+    document.getElementById("preloader").style.display="none";
+    console.log("loaded"); 
+}
 
 function getValue(whichClass) {
     const ticketAmount = document.getElementById(whichClass + "-class");
@@ -85,8 +88,4 @@ function animation() {
 
     getElement("ticket-inner").setAttribute("class", "change-position content");
     getElement("ticket").style.backdropFilter = "blur(10px)";
-}
-
-function preloader(){
-    document.getElementById("preloader").style.display="none";
-}
+}  

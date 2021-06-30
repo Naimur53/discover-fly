@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style-type: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -187,9 +188,10 @@ input::-webkit-inner-spin-button {
 }
 
 .booking-form {
-    height: 90%;
+    height: 100vh;
     transition: all .3s ease-in-out;
     position: absolute;
+    top: 0;
     left: 200px;
 }
 
@@ -303,4 +305,45 @@ input::-webkit-inner-spin-button {
 
  ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+/* preloader */
+#preloader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    color: white;
+    top: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #000;  
+}
+#preloader p{
+    font-size: 150px; 
+    font-weight: bold;
+    position: absolute;   
+    font-family: 'Poppins', sans-serif;
+}
+#preloader p:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke:1px #03e9f4;
+}
+#preloader p:nth-child(2){ 
+    background: -webkit-linear-gradient(231deg, rgba(42,12,222,0.8715861344537815) 6%, rgba(13,198,209,0.8323704481792717) 25%, rgba(233,168,45,0.6558998599439776) 49%, rgba(144,13,153,0.7931547619047619) 70%, rgba(16,186,27,0.7595413165266106) 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    animation: animate 3s alternate ease-in-out infinite;
+
+}
+@keyframes animate{
+    from{
+
+        clip-path: polygon(0% 49%, 12% 41%, 25% 39%, 39% 43%, 50% 52%, 62% 57%, 76% 57%, 86% 53%, 92% 47%, 100% 44%, 100% 100%, 0 100%);
+    }
+    to{
+        clip-path: polygon(0 58%, 9% 52%, 23% 51%, 33% 54%, 46% 54%, 58% 48%, 70% 45%, 79% 42%, 93% 41%, 100% 47%, 100% 100%, 0 100%);
+    }
+
 }

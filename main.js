@@ -86,3 +86,7 @@ function animation() {
     getElement("ticket-inner").setAttribute("class", "change-position content");
     getElement("ticket").style.backdropFilter = "blur(10px)";
 }
+
+function preloader(){
+    document.getElementById("preloader").style.display="none";
+}
